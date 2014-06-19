@@ -10,6 +10,8 @@
 
 @interface ViewController () <UITextViewDelegate>
 
+@property (nonatomic) NSInteger dispensedCash;
+
 @end
 
 @implementation ViewController
@@ -21,18 +23,53 @@
     self.inputTextView.delegate = self;
 }
 
-#pragma mark - UITextViewDelegate
-
-//- (void)textViewDidChange:(UITextView*)textView
-//{
-//    self.outputTextView.text = textView.text;
-//}
-
-- (void)textViewDidEndEditing:(UITextView*)textView
+- (NSString*)screenAPI:(NSInteger)input
 {
-    self.outputTextView.text = textView.text;
-    NSLog(@"===============================================================================");
-    NSLog(@"OUTPUT: %@\n\n", textView.text);
+    if (input == 25) {
+        return @"Dispensing gum";
+    }
+    return nil;
+}
+
+- (IBAction)insertQuarter
+{
+    NSString* inputText = self.inputTextView.text;
+    self.inputTextView.text = [inputText stringByAppendingString:@"Inserted quarter\n"];
+
+    self.dispensedCash += 25;
+
+    NSString* outputFromScreenAPI = [self screenAPI:self.dispensedCash];
+    self.outputTextView.text = outputFromScreenAPI;
+}
+
+- (IBAction)insertDime
+{
+    NSString* inputText = self.inputTextView.text;
+    self.inputTextView.text = [inputText stringByAppendingString:@"Inserted dime\n"];
+
+    NSString* outputFromScreenAPI = [self screenAPI:self.dispensedCash];
+    self.outputTextView.text = outputFromScreenAPI;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"VendingMachineItem"];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"Gum";
+    } else {
+        cell.textLabel.text = @"Twinkie";
+    }
+    return cell;
 }
 
 @end

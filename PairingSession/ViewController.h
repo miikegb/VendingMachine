@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView* inputTextView;
 @property (weak, nonatomic) IBOutlet UITextView* outputTextView;
+
+- (NSString*)screenAPI:(NSInteger)input;
+- (IBAction)insertQuarter;
+- (IBAction)insertDime;
 
 @end
