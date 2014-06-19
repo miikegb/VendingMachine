@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextView* inputTextView;
+@property (weak, nonatomic) IBOutlet UITextView* outputTextView;
+
 @end

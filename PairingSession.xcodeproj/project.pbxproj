@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655FAD123D984E3CB15A7D37 /* libPods-PairingSessionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3569E7863B3D4A889624D572 /* libPods-PairingSessionTests.a */; };
 		94B78D531953010F00CF1B13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D521953010F00CF1B13 /* Foundation.framework */; };
 		94B78D551953010F00CF1B13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D541953010F00CF1B13 /* CoreGraphics.framework */; };
 		94B78D571953010F00CF1B13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D561953010F00CF1B13 /* UIKit.framework */; };
@@ -21,7 +22,7 @@
 		94B78D761953010F00CF1B13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D521953010F00CF1B13 /* Foundation.framework */; };
 		94B78D771953010F00CF1B13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D561953010F00CF1B13 /* UIKit.framework */; };
 		94B78D7F1953010F00CF1B13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94B78D7D1953010F00CF1B13 /* InfoPlist.strings */; };
-		94B78D811953010F00CF1B13 /* PairingSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B78D801953010F00CF1B13 /* PairingSessionTests.m */; };
+		94B78D8D195303BC00CF1B13 /* ViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B78D8C195303BC00CF1B13 /* ViewControllerSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3569E7863B3D4A889624D572 /* libPods-PairingSessionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PairingSessionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B78D4F1953010F00CF1B13 /* PairingSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PairingSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B78D521953010F00CF1B13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94B78D541953010F00CF1B13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,7 +56,8 @@
 		94B78D741953010F00CF1B13 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		94B78D7C1953010F00CF1B13 /* PairingSessionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PairingSessionTests-Info.plist"; sourceTree = "<group>"; };
 		94B78D7E1953010F00CF1B13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		94B78D801953010F00CF1B13 /* PairingSessionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PairingSessionTests.m; sourceTree = "<group>"; };
+		94B78D8C195303BC00CF1B13 /* ViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSpec.m; sourceTree = "<group>"; };
+		C8B5385E7B244BF48C323A0B /* Pods-PairingSessionTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PairingSessionTests.xcconfig"; path = "Pods/Pods-PairingSessionTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 				94B78D751953010F00CF1B13 /* XCTest.framework in Frameworks */,
 				94B78D771953010F00CF1B13 /* UIKit.framework in Frameworks */,
 				94B78D761953010F00CF1B13 /* Foundation.framework in Frameworks */,
+				655FAD123D984E3CB15A7D37 /* libPods-PairingSessionTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 				94B78D7A1953010F00CF1B13 /* PairingSessionTests */,
 				94B78D511953010F00CF1B13 /* Frameworks */,
 				94B78D501953010F00CF1B13 /* Products */,
+				C8B5385E7B244BF48C323A0B /* Pods-PairingSessionTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +112,7 @@
 				94B78D541953010F00CF1B13 /* CoreGraphics.framework */,
 				94B78D561953010F00CF1B13 /* UIKit.framework */,
 				94B78D741953010F00CF1B13 /* XCTest.framework */,
+				3569E7863B3D4A889624D572 /* libPods-PairingSessionTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,8 +146,8 @@
 		94B78D7A1953010F00CF1B13 /* PairingSessionTests */ = {
 			isa = PBXGroup;
 			children = (
-				94B78D801953010F00CF1B13 /* PairingSessionTests.m */,
 				94B78D7B1953010F00CF1B13 /* Supporting Files */,
+				94B78D8C195303BC00CF1B13 /* ViewControllerSpec.m */,
 			);
 			path = PairingSessionTests;
 			sourceTree = "<group>";
@@ -179,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94B78D871953010F00CF1B13 /* Build configuration list for PBXNativeTarget "PairingSessionTests" */;
 			buildPhases = (
+				2EB91A1CA6044AA8B3D1C836 /* Check Pods Manifest.lock */,
 				94B78D6F1953010F00CF1B13 /* Sources */,
 				94B78D701953010F00CF1B13 /* Frameworks */,
 				94B78D711953010F00CF1B13 /* Resources */,
+				ADF54BC918CE407E95C487D7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +256,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2EB91A1CA6044AA8B3D1C836 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADF54BC918CE407E95C487D7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-PairingSessionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94B78D4B1953010F00CF1B13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B78D811953010F00CF1B13 /* PairingSessionTests.m in Sources */,
+				94B78D8D195303BC00CF1B13 /* ViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +454,7 @@
 		};
 		94B78D881953010F00CF1B13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8B5385E7B244BF48C323A0B /* Pods-PairingSessionTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PairingSession.app/PairingSession";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -435,6 +477,7 @@
 		};
 		94B78D891953010F00CF1B13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8B5385E7B244BF48C323A0B /* Pods-PairingSessionTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PairingSession.app/PairingSession";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -470,6 +513,7 @@
 				94B78D861953010F00CF1B13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94B78D871953010F00CF1B13 /* Build configuration list for PBXNativeTarget "PairingSessionTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +522,7 @@
 				94B78D891953010F00CF1B13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

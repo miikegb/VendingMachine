@@ -8,22 +8,31 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextViewDelegate>
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [super viewWillAppear:animated];
+    [self.inputTextView becomeFirstResponder];
+    self.inputTextView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - UITextViewDelegate
+
+//- (void)textViewDidChange:(UITextView*)textView
+//{
+//    self.outputTextView.text = textView.text;
+//}
+
+- (void)textViewDidEndEditing:(UITextView*)textView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.outputTextView.text = textView.text;
+    NSLog(@"===============================================================================");
+    NSLog(@"OUTPUT: %@\n\n", textView.text);
 }
 
 @end
