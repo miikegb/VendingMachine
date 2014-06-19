@@ -1,0 +1,23 @@
+PODS:
+  - Kiwi (2.2.4):
+    - Kiwi/SenTestingKit
+  - Kiwi/ARC (2.2.4)
+  - Kiwi/NonARC (2.2.4)
+  - Kiwi/SenTestingKit (2.2.4):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - Kiwi/XCTest (2.2.4):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - MockInject (1.0.1):
+    - Kiwi
+
+DEPENDENCIES:
+  - Kiwi/XCTest (~> 2.2)
+  - MockInject (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
+  MockInject: 8546e1cf0caf18f6aba2698fb13860524ffe48cf
+
+COCOAPODS: 0.33.1
