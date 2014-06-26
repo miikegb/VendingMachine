@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    CoinQuarter = 0x100,
-    CoinDime
+    CoinQuarter = 25,
+    CoinDime = 10
 } Coin;
 
 @interface ScreenAPI : NSObject

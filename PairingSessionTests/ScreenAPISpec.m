@@ -32,16 +32,16 @@ describe(@"ScreenAPI", ^{
         });
         
         it(@"should accept a quarter and return 25", ^{
-            NSNumber* output = [subject insertCoin:CoinQuarter];
-            [[output should] equal:@25];
+            NSInteger output = [subject insertCoin:CoinQuarter];
+            [[@(output) should] equal:@25];
         });
         
         it(@"should accept one or more coins (quarter, dime) and return sum", ^{
-            NSNumber* output = [subject insertCoin:CoinQuarter];
+            NSInteger output = [subject insertCoin:CoinQuarter];
             output = [subject insertCoin:CoinQuarter];
             output = [subject insertCoin:CoinDime];
             
-            [[output should] equal:@60];
+            [[@(output) should] equal:@60];
         });
     });
     

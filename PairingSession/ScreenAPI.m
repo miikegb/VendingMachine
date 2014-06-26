@@ -16,19 +16,8 @@
 
 - (NSInteger)insertCoin:(Coin)coin
 {
-    self.receivedCash += [self coinToCash:coin];
+    self.receivedCash += coin;
     return self.receivedCash;
-}
-
-- (NSInteger)coinToCash:(Coin)coin
-{
-    if (coin == CoinQuarter) {
-        return 25;
-    } else if (coin == CoinDime) {
-        return 10;
-    }
-
-    return 0;
 }
 
 @end
