@@ -31,16 +31,12 @@
 - (BOOL)selectItem:(NSString*)item
 {
 
-    if ([item isEqualToString:@"Twinkie"]) {
-        if (self.receivedCash == 75) {
-            self.receivedCash -= 75;
-            return YES;
-        }
-    } else if ([item isEqualToString:@"Gum"]) {
-        if (self.receivedCash == 25) {
-            self.receivedCash -= 25;
-            return YES;
-        }
+    NSDictionary* prices = @{ @"Twinkie" : @75,
+                              @"Gum" : @25 };
+
+    if ([prices[item] isEqual:@(self.receivedCash)]) {
+        self.receivedCash -= [prices[item] integerValue];
+        return YES;
     }
 
     return NO;
