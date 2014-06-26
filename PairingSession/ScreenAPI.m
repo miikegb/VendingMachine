@@ -14,10 +14,10 @@
 
 @implementation ScreenAPI
 
-- (NSNumber*)insertCoin:(Coin)coin
+- (NSInteger)insertCoin:(Coin)coin
 {
     self.receivedCash += [self coinToCash:coin];
-    return @(self.receivedCash);
+    return self.receivedCash;
 }
 
 - (NSInteger)coinToCash:(Coin)coin

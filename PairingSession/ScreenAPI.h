@@ -15,6 +15,6 @@ typedef enum {
 
 @interface ScreenAPI : NSObject
 
-- (NSNumber*)insertCoin:(Coin)coin;
+- (NSInteger)insertCoin:(Coin)coin;
 
 @end
