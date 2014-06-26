@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		655FAD123D984E3CB15A7D37 /* libPods-PairingSessionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3569E7863B3D4A889624D572 /* libPods-PairingSessionTests.a */; };
+		9437B4221953433A0047F368 /* ScreenAPISpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 9437B4211953433A0047F368 /* ScreenAPISpec.m */; };
+		9437B425195343B60047F368 /* ScreenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9437B424195343B60047F368 /* ScreenAPI.m */; };
 		94B78D531953010F00CF1B13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D521953010F00CF1B13 /* Foundation.framework */; };
 		94B78D551953010F00CF1B13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D541953010F00CF1B13 /* CoreGraphics.framework */; };
 		94B78D571953010F00CF1B13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78D561953010F00CF1B13 /* UIKit.framework */; };
@@ -37,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		3569E7863B3D4A889624D572 /* libPods-PairingSessionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PairingSessionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9437B4211953433A0047F368 /* ScreenAPISpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenAPISpec.m; sourceTree = "<group>"; };
+		9437B423195343B60047F368 /* ScreenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenAPI.h; sourceTree = "<group>"; };
+		9437B424195343B60047F368 /* ScreenAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenAPI.m; sourceTree = "<group>"; };
 		94B78D4F1953010F00CF1B13 /* PairingSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PairingSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B78D521953010F00CF1B13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94B78D541953010F00CF1B13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +125,8 @@
 		94B78D581953010F00CF1B13 /* PairingSession */ = {
 			isa = PBXGroup;
 			children = (
+				9437B423195343B60047F368 /* ScreenAPI.h */,
+				9437B424195343B60047F368 /* ScreenAPI.m */,
 				94B78D611953010F00CF1B13 /* AppDelegate.h */,
 				94B78D621953010F00CF1B13 /* AppDelegate.m */,
 				94B78D641953010F00CF1B13 /* Main_iPhone.storyboard */,
@@ -148,6 +155,7 @@
 			children = (
 				94B78D7B1953010F00CF1B13 /* Supporting Files */,
 				94B78D8C195303BC00CF1B13 /* ViewControllerSpec.m */,
+				9437B4211953433A0047F368 /* ScreenAPISpec.m */,
 			);
 			path = PairingSessionTests;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9437B425195343B60047F368 /* ScreenAPI.m in Sources */,
 				94B78D6C1953010F00CF1B13 /* ViewController.m in Sources */,
 				94B78D631953010F00CF1B13 /* AppDelegate.m in Sources */,
 				94B78D5F1953010F00CF1B13 /* main.m in Sources */,
@@ -305,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B78D8D195303BC00CF1B13 /* ViewControllerSpec.m in Sources */,
+				9437B4221953433A0047F368 /* ScreenAPISpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
