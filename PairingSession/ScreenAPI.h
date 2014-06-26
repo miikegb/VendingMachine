@@ -15,7 +15,8 @@ typedef enum {
 
 @interface ScreenAPI : NSObject
 
+@property (nonatomic, strong, readonly) NSArray* availableItems;
+
 - (NSInteger)insertCoin:(Coin)coin;
-- (NSArray*)availableItems;
 
 @end

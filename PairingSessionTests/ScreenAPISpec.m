@@ -53,7 +53,7 @@ describe(@"ScreenAPI", ^{
         
         it(@"should return Gum and Twinkie as the items", ^{
             NSArray* expectedItems = @[@"Gum", @"Twinkie"];
-            [[[subject availableItems] should] equal:expectedItems];
+            [[subject.availableItems should] equal:expectedItems];
         });
     });
 });
