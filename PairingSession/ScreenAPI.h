@@ -18,5 +18,6 @@ typedef enum {
 @property (nonatomic, strong, readonly) NSArray* availableItems;
 
 - (NSInteger)insertCoin:(Coin)coin;
+- (BOOL)selectItem:(NSString*)item;
 
 @end

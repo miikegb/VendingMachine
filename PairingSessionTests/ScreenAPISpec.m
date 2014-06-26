@@ -27,7 +27,7 @@ describe(@"ScreenAPI", ^{
             subject = [[ScreenAPI alloc] init];
         });
         
-        it(@"should have a method to process an order", ^{
+        it(@"should have a method to accept coins", ^{
             [[subject should] respondToSelector:@selector(insertCoin:)];
         });
         
@@ -54,6 +54,41 @@ describe(@"ScreenAPI", ^{
         it(@"should return Gum and Twinkie as the items", ^{
             NSArray* expectedItems = @[@"Gum", @"Twinkie"];
             [[subject.availableItems should] equal:expectedItems];
+        });
+    });
+    
+    context(@"Dispense selected item", ^{
+        __block ScreenAPI* subject = nil;
+        beforeEach(^{
+            subject = [[ScreenAPI alloc] init];
+        });
+        
+        it(@"should have a method to select item", ^{
+            [[subject should] respondToSelector:@selector(selectItem:)];
+        });
+        
+        it(@"should dispense twinkie when it receives 3 quarters", ^{
+            [subject insertCoin:CoinQuarter];
+            [subject insertCoin:CoinQuarter];
+            [subject insertCoin:CoinQuarter];
+
+            [[@([subject selectItem:@"Twinkie"]) should] beYes];
+        });
+        
+        it(@"should not dispense a twinkie when it receives less than 3 quarters", ^{
+            [subject insertCoin:CoinQuarter];
+            [subject insertCoin:CoinQuarter];
+            
+            [[@([subject selectItem:@"Twinkie"]) should] beNo];
+        });
+        
+        it(@"should not dispense a second twinkie when it doesn't have enough funds", ^{
+            [subject insertCoin:CoinQuarter];
+            [subject insertCoin:CoinQuarter];
+            [subject insertCoin:CoinQuarter];
+            [subject selectItem:@"Twinkie"];
+            
+            [[@([subject selectItem:@"Twinkie"]) should] beNo];
         });
     });
 });

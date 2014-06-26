@@ -28,4 +28,14 @@
     ];
 }
 
+- (BOOL)selectItem:(NSString*)item
+{
+    if (self.receivedCash == 75) {
+        self.receivedCash -= 75;
+        return YES;
+    }
+
+    return NO;
+}
+
 @end
