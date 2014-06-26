@@ -20,4 +20,12 @@
     return self.receivedCash;
 }
 
+- (NSArray*)availableItems
+{
+    return @[
+        @"Gum",
+        @"Twinkie"
+    ];
+}
+
 @end
