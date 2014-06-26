@@ -30,9 +30,17 @@
 
 - (BOOL)selectItem:(NSString*)item
 {
-    if (self.receivedCash == 75) {
-        self.receivedCash -= 75;
-        return YES;
+
+    if ([item isEqualToString:@"Twinkie"]) {
+        if (self.receivedCash == 75) {
+            self.receivedCash -= 75;
+            return YES;
+        }
+    } else if ([item isEqualToString:@"Gum"]) {
+        if (self.receivedCash == 25) {
+            self.receivedCash -= 25;
+            return YES;
+        }
     }
 
     return NO;

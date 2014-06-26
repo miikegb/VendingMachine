@@ -90,6 +90,13 @@ describe(@"ScreenAPI", ^{
             
             [[@([subject selectItem:@"Twinkie"]) should] beNo];
         });
+        
+        it(@"should dispense a gum, not a twinkie if it only inserted a quarter", ^{
+            [subject insertCoin:CoinQuarter];
+            
+            [[@([subject selectItem:@"Twinkie"]) should] beNo];
+            [[@([subject selectItem:@"Gum"]) should] beYes];
+        });
     });
 });
 
