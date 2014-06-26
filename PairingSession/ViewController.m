@@ -7,14 +7,22 @@
 //
 
 #import "ViewController.h"
+#import "ScreenAPI.h"
 
 @interface ViewController () <UITextViewDelegate>
 
 @property (nonatomic) NSInteger dispensedCash;
+@property (nonatomic, strong) ScreenAPI* screenAPI;
 
 @end
 
 @implementation ViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.screenAPI = [[ScreenAPI alloc] init];
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -25,7 +33,7 @@
 
 - (NSString*)screenAPI:(NSInteger)input
 {
-    if (input == 25) {
+    if (input == CoinQuarter) {
         return @"Dispensing gum";
     }
     return nil;
@@ -36,7 +44,7 @@
     NSString* inputText = self.inputTextView.text;
     self.inputTextView.text = [inputText stringByAppendingString:@"Inserted quarter\n"];
 
-    self.dispensedCash += 25;
+    self.dispensedCash = [self.screenAPI insertCoin:CoinQuarter];
 
     NSString* outputFromScreenAPI = [self screenAPI:self.dispensedCash];
     self.outputTextView.text = outputFromScreenAPI;
@@ -58,17 +66,13 @@
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return self.screenAPI.availableItems.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"VendingMachineItem"];
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"Gum";
-    } else {
-        cell.textLabel.text = @"Twinkie";
-    }
+    cell.textLabel.text = self.screenAPI.availableItems[indexPath.row];
     return cell;
 }
 
