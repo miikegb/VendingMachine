@@ -11,13 +11,7 @@
 
 SPEC_BEGIN(ScreenAPISpec)
 
-describe(@"ScreenAPI", ^{
-    context(@"Creation", ^{
-        it(@"should be able to be created", ^{
-            ScreenAPI* subject = [[ScreenAPI alloc] init];
-            [[subject shouldNot] beNil];
-        });
-    });
+describe(@"Screen API", ^{
     
     context(@"Accepting money", ^{
         
